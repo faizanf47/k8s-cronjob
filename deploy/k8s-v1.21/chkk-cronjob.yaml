@@ -50,6 +50,14 @@ rules:
       - list
       - watch
   - apiGroups:
+      - ""
+    resources:
+      - configmaps
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
       - apps
     resources:
       - replicasets
@@ -111,6 +119,7 @@ data:
     Service: true
     Job: true
     Ingress: true
+    ConfigMap: true
 kind: ConfigMap
 metadata:
   labels:
