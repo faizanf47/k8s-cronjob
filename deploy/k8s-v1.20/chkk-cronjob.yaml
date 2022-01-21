@@ -2,6 +2,9 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: chkk-system
+  annotations:
+    chkk.io/name: ClusterGuard
+    chkk.io/version: v1.0.15
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -10,6 +13,9 @@ metadata:
     app.kubernetes.io/instance: chkk-cluster-context-cronjob
     app.kubernetes.io/managed-by: kubectl
     app.kubernetes.io/name: chkk-cluster-context-cronjob
+  annotations:
+    chkk.io/name: ClusterGuard
+    chkk.io/version: v1.0.15
   name: chkk-cluster-context-cronjob
   namespace: chkk-system
 ---
@@ -20,6 +26,9 @@ metadata:
     app.kubernetes.io/instance: chkk-cluster-context-cronjob
     app.kubernetes.io/managed-by: kubectl
     app.kubernetes.io/name: chkk-cluster-context-cronjob
+  annotations:
+    chkk.io/name: ClusterGuard
+    chkk.io/version: v1.0.15
   name: chkk-cluster-context-cronjob
 rules:
   - apiGroups:
@@ -94,6 +103,9 @@ metadata:
     app.kubernetes.io/instance: chkk-cluster-context-cronjob
     app.kubernetes.io/managed-by: kubectl
     app.kubernetes.io/name: chkk-cluster-context-cronjob
+  annotations:
+    chkk.io/name: ClusterGuard
+    chkk.io/version: v1.0.15
   name: chkk-cluster-context-cronjob
 roleRef:
   apiGroup: rbac.authorization.k8s.io
@@ -126,6 +138,9 @@ metadata:
     app.kubernetes.io/instance: chkk-cluster-context-cronjob
     app.kubernetes.io/managed-by: kubectl
     app.kubernetes.io/name: chkk-cluster-context-cronjob
+  annotations:
+    chkk.io/name: ClusterGuard
+    chkk.io/version: v1.0.15
   name: chkk-cluster-context-cronjob
   namespace: chkk-system
 ---
@@ -136,6 +151,9 @@ metadata:
     app.kubernetes.io/instance: chkk-cluster-context-cronjob
     app.kubernetes.io/managed-by: kubectl
     app.kubernetes.io/name: chkk-cluster-context-cronjob
+  annotations:
+    chkk.io/name: ClusterGuard
+    chkk.io/version: v1.0.15
   name: chkk-cluster-context-cronjob
   namespace: chkk-system
 ---
@@ -146,6 +164,9 @@ metadata:
     app.kubernetes.io/instance: chkk-cluster-context-cronjob
     app.kubernetes.io/managed-by: kubectl
     app.kubernetes.io/name: chkk-cluster-context-cronjob
+  annotations:
+    chkk.io/name: ClusterGuard
+    chkk.io/version: v1.0.15
   name: chkk-cluster-context-cronjob
   namespace: chkk-system
 spec:
@@ -154,12 +175,18 @@ spec:
       labels:
         app.kubernetes.io/instance: chkk-cluster-context-cronjob
         app.kubernetes.io/name: chkk-cluster-context-cronjob
+      annotations:
+        chkk.io/name: ClusterGuard
+        chkk.io/version: v1.0.15
     spec:
       template:
         metadata:
           labels:
             app.kubernetes.io/instance: chkk-cluster-context-cronjob
             app.kubernetes.io/name: chkk-cluster-context-cronjob
+          annotations:
+            chkk.io/name: ClusterGuard
+            chkk.io/version: v1.0.15
         spec:
           automountServiceAccountToken: true
           containers:
@@ -208,6 +235,9 @@ metadata:
     app.kubernetes.io/instance: chkk-cluster-context-firstscan-job
     app.kubernetes.io/managed-by: kubectl
     app.kubernetes.io/name: chkk-cluster-context-firstscan-job
+  annotations:
+    chkk.io/name: ClusterGuard
+    chkk.io/version: v1.0.15
   name: chkk-cluster-context-firstscan-job
   namespace: chkk-system
 spec:
@@ -216,6 +246,9 @@ spec:
       labels:
         app.kubernetes.io/instance: chkk-cluster-context-firstscan-job
         app.kubernetes.io/name: chkk-cluster-context-firstscan-job
+      annotations:
+        chkk.io/name: ClusterGuard
+        chkk.io/version: v1.0.15
     spec:
       automountServiceAccountToken: true
       containers:
